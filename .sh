@@ -1,0 +1,5 @@
+cd ./client
+npm run dev&
+
+cd ../server
+nodemon server
