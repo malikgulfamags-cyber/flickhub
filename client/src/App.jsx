@@ -19,6 +19,18 @@ import VerifyEmail from './pages/VerifyEmail';
 import AnimePage from './pages/movies/AnimePage';
 import NotFound from './pages/NotFound';
 import { Toaster } from 'react-hot-toast';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
@@ -42,6 +54,7 @@ function App() {
       />
       <Navbar />
       <main className="flex-grow">
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movie/:id" element={<MovieDetail />} />
