@@ -646,12 +646,12 @@ function MovieDetail() {
     />
       <style>{detailStyles}</style>
       <div className="md-page">
-        {backdrop && (
+        {/* {backdrop && (
           <div className="md-backdrop">
             <img src={backdrop} alt="" />
             <div className="md-backdrop-fade" />
           </div>
-        )}
+        )} */}
 
         <div className="md-body">
           <div className="md-hero">
@@ -853,7 +853,7 @@ function MovieDetail() {
               </div>
             )}
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </>
